@@ -22,6 +22,7 @@ axis_x = axis_x * np.pi
 
 #Calculating the Sine
 sine = np.sin(axis_x)
+
 #Calculating the Cosine
 cosine = np.cos(axis_x)
 
