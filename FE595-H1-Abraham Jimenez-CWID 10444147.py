@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Feb  7 10:48:03 2019
+
+@author: ramra
+"""
+
 # FE 595: Python for Finance
 # Homework 1
 # Abraham Jimenez-Berlanga
@@ -26,12 +33,20 @@ sine = np.sin(axis_x)
 #Calculating the Cosine
 cosine = np.cos(axis_x)
 
+#Calculating the Cosine - Venkata
+tan = np.tan(axis_x)
+#Creating a Top level container for all plot elements venkata
+fig = plt.figure()
+
+
+
 #Defining the object graph_viz so the graph can be formated as desired
 fig, graph_viz = plt.subplots()
 
 #ploting the sine and cosine
 graph_viz.plot(axis_x, sine, 'r--', label="Sine Function")
 graph_viz.plot(axis_x, cosine, 'bs', label="Cosine Function")
+graph_viz.plot(axis_x, tan, label="Tangent Function")
 
 #Define the X axis limits
 graph_viz.set_xlim((0, 2 * np.pi))
@@ -49,3 +64,7 @@ graph_viz.set_xticklabels(['0', '$\pi$/2', '$\pi$', '3$\pi$/2', '2$\pi$'])
 plt.legend()
 plt.title("Sine and Cosine Graphs")
 plt.show(block=True)
+
+#Saving the graph localli
+# we can set the path here based on where we wanted to save- by default it save in same location where the python script exist
+fig.savefig('sine_cosine_tangent.png')
